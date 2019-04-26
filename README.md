@@ -17,3 +17,11 @@ compute_saliency_for_imgs()
 compute and save GradCam for each class with, run
 for K_FOLD in range(0, 5):
 compute_saliency_for_classes(colormap=True)
+
+Before computing important features and areas, you need to create GradCam for each image in grayscale, run
+for K_FOLD in range(0, 5):
+compute_saliency_for_classes(colormap=False)
+
+and then you can run get_importent_features() to get importances and graphs
+
+and then you can compute areas, run get_importent_areas()
